@@ -1,2 +1,5 @@
 # responsive-web-design
 Projects for [freecodecamp.org](https://www.freecodecamp.org/learn/responsive-web-design/) responsive web design certification
+
+The preview of these projects are as follows
+- [Build a Tribute Page](https://codepen.io/dinesh-prabhu/full/xxrZXov)
