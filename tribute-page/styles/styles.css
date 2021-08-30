@@ -65,6 +65,7 @@ a:hover {
     }
     #quote {
         text-align: center;
+        align-self: center;
     }
 }
 @media (min-width: 360px) {
@@ -120,14 +121,14 @@ a:hover {
     }
     #tribute-info > :nth-child(1) { order: 1; }
     #tribute-info > :nth-child(2) { order: 3; }
-    #tribute-info :nth-child(3) { order: 2; }
-    #tribute-info :nth-child(4) { order: 4; }
-    #tribute-info :nth-child(5) { order: 5; }
-    #tribute-info :nth-child(6) { order: 6; }
-    #tribute-info :nth-child(7) { order: 8; }
-    #tribute-info :nth-child(8) { order: 7; }
-    #tribute-info :nth-child(9) { order: 9; }
-    #tribute-info :nth-child(10) { order: 10; }
+    #tribute-info > :nth-child(3) { order: 2; }
+    #tribute-info > :nth-child(4) { order: 4; }
+    #tribute-info > :nth-child(5) { order: 5; }
+    #tribute-info > :nth-child(6) { order: 6; }
+    #tribute-info > :nth-child(7) { order: 8; }
+    #tribute-info > :nth-child(8) { order: 7; }
+    #tribute-info > :nth-child(9) { order: 9; }
+    #tribute-info > :nth-child(10) { order: 10; }
 }
 @media (min-width: 1080px) {
     #main {
@@ -139,7 +140,7 @@ a:hover {
     #einstein-image {
         max-width: 219px;
     }
-    #tribute-info :nth-child(8) { 
+    #tribute-info > :nth-child(8) { 
         flex-basis: calc(100% - 300px - 3%); 
     }
 }
