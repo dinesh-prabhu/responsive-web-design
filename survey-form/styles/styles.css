@@ -1,0 +1,86 @@
+:root {
+    --bg-color: #00BF6F;
+    --primary-font-color: #fff;
+    --star-color: #fc0;
+}
+body {
+    background-color: var(--bg-color);
+}
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20%;
+    align-items: center;
+    color: var(--primary-font-color);
+}
+#survey-form {
+    background-color: #fff;
+    margin: 0 20%;
+    display: flex;
+    flex-flow: row wrap;
+    border-radius: 10px;
+    padding: 2%;
+}
+#survey-form > *:not(:last-child) {
+    margin-bottom: 2%;
+}
+.form-group {
+    flex: 1 50%;
+    display: flex;
+}
+.form-group > input {
+    width: 50%;
+}
+.form-group > label {
+    width: 30%;
+}
+.option-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 50%;
+}
+#other-comments {
+    flex: 1 100%;
+}
+#survey-form > button {
+    background-color: var(--bg-color);
+    color: var(--primary-font-color);
+    flex: 1 100%;
+    padding: 1% 0;
+}
+#rating-container > p {
+    margin-bottom: 0;
+}
+#food-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+#food-rating > label {
+    letter-spacing: 25px;
+    filter: grayscale(1);
+    color: var(--star-color);
+    font-size: 40px;
+    transition: all .1s ease-in;
+}
+#experience-rating > label {
+    letter-spacing: 30px;
+    filter: grayscale(1);
+    font-size: 30px;
+    display: inline-block;
+    transition: all .1s ease-in;
+}
+#food-rating > input,
+#experience-rating > input {
+    display: none;
+}
+#food-rating > input:hover ~ label,
+#food-rating > input:checked ~ label,
+#experience-rating > input:hover + label,
+#experience-rating > input:checked + label {
+    filter: grayscale(0);
+}
+#food-rating > input:checked + label,
+#experience-rating > input:checked + label {
+    transform: scale(1.5);
+}

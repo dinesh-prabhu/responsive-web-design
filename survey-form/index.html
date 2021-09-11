@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Survey Form</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Survey form for freecodecamp certification">
+    <meta name="keywords" content="HTML, CSS">
+    <meta name="author" content="Dinesh Prabhu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>FEED US BACK</h1>
+        <p>Help us know you better, so that we can serve you better.</p>
+    </header>
+    <form id="survey-form" onsubmit="return false;">
+        <div class="form-group">
+            <label for="name" id="name-label">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="number" id="number-label">Age</label>
+            <input type="number" id="number" min="18" max="100" placeholder="Enter your age" required>
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone-number">Phone Number</label>
+            <input type="tel" id="phone-number" pattern="\d{10}" maxlength="10" placeholder="Enter your phone number"
+                required>
+        </div>
+        <div class="option-group">
+            <p>Type of order</p>
+            <div>
+                <input type="radio" name="order-type" id="DI" value="DI">
+                <label for="DI">Dine In</label>
+                <input type="radio" name="order-type" id="TA" value="TA">
+                <label for="TA">Take Away</label>
+                <input type="radio" name="order-type" id="DE" value="DE">
+                <label for="DE">Delivery</label>
+                <input type="radio" name="order-type" id="DT" value="DT">
+                <label for="DT">Drive Thru</label>
+            </div>
+        </div>
+        <div class="option-group">
+            <p>What did you order?</p>
+            <select>
+                <option value="VD">Veggie Delite</option>
+                <option value="PBK">Plain Baked Potato</option>
+                <option value="FF">French Fries</option>
+                <option value="TCP">Thin Crust Pizza</option>
+            </select>
+        </div>
+        <div class="option-group" id="rating-container">
+            <p>Rate the quality of food</p>
+            <div id="food-rating">
+                <input type="radio" name="food-rating" value="5" id="five-start-rating">
+                <label for="five-start-rating">★</label>
+                <input type="radio" name="food-rating" value="4" id="four-start-rating">
+                <label for="four-start-rating">★</label>
+                <input type="radio" name="food-rating" value="3" id="three-start-rating">
+                <label for="three-start-rating">★</label>
+                <input type="radio" name="food-rating" value="2" id="two-start-rating">
+                <label for="two-start-rating">★</label>
+                <input type="radio" name="food-rating" value="1" id="one-start-rating">
+                <label for="one-start-rating">★</label>
+            </div>
+        </div>
+        <div class="option-group">
+            <p>Rate your overall experience</p>
+            <div id="experience-rating">
+                <input type="radio" name="overall-rating" value="angry" id="angry-rating">
+                <label for="angry-rating">😡</label>
+                <input type="radio" name="overall-rating" value="disappointed" id="disappointed-rating">
+                <label for="disappointed-rating">😞</label>
+                <input type="radio" name="overall-rating" value="neutral" id="neutral-rating">
+                <label for="neutral-rating">😐</label>
+                <input type="radio" name="overall-rating" value="happy" id="happy-rating">
+                <label for="happy-rating">🙂</label>
+                <input type="radio" name="overall-rating" value="star-struck" id="star-struck-rating">
+                <label for="star-struck-rating">🤩</label>
+            </div>
+        </div>
+        <textarea id="other-comments" placeholder="Do you have any other comments?"></textarea>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>
