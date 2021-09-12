@@ -3,15 +3,25 @@
     --primary-font-color: #fff;
     --star-color: #fc0;
 }
+body, html {
+    height: 100vh;
+    margin: 0;
+}
 body {
     background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 header {
     display: flex;
     flex-direction: column;
-    margin: 0 20%;
     align-items: center;
     color: var(--primary-font-color);
+}
+header > p {
+    font-size: large;
+    margin-top: 0;
 }
 #survey-form {
     background-color: #fff;
@@ -20,6 +30,7 @@ header {
     flex-flow: row wrap;
     border-radius: 10px;
     padding: 2%;
+    font-size: large;
 }
 #survey-form > *:not(:last-child) {
     margin-bottom: 2%;
@@ -30,6 +41,7 @@ header {
 }
 .form-group > input {
     width: 50%;
+    padding: 1%;
 }
 .form-group > label {
     width: 30%;
@@ -39,14 +51,21 @@ header {
     flex-direction: column;
     flex: 1 50%;
 }
+.option-group > select {
+    padding: 1%;
+}
 #other-comments {
     flex: 1 100%;
+    min-height: 120px;
+    font-size: large;
 }
 #survey-form > button {
     background-color: var(--bg-color);
     color: var(--primary-font-color);
     flex: 1 100%;
     padding: 1% 0;
+    font-size: large;
+    border: none;
 }
 #rating-container > p {
     margin-bottom: 0;
@@ -83,4 +102,7 @@ header {
 #food-rating > input:checked + label,
 #experience-rating > input:checked + label {
     transform: scale(1.5);
+}
+footer {
+    align-self: center;
 }
