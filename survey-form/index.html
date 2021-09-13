@@ -13,8 +13,8 @@
 
 <body>
     <header>
-        <h1>FEED US BACK</h1>
-        <p>Help us know you better, so that we can serve you better.</p>
+        <h1 id="title">FEED US BACK</h1>
+        <p id="description">Help us know you better, so that we can serve you better.</p>
     </header>
     <form id="survey-form" onsubmit="return false;">
         <div class="form-group">
@@ -30,8 +30,8 @@
             <input type="email" id="email" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
-            <label for="phone-number">Phone Number</label>
-            <input type="tel" id="phone-number" pattern="\d{10}" maxlength="10" placeholder="Enter your phone number"
+            <label for="phone-number">Mobile</label>
+            <input type="tel" id="phone-number" pattern="\d{5}\s\d{5}" maxlength="11" placeholder="Eg: 98765 43210"
                 required>
         </div>
         <div class="option-group">
@@ -43,13 +43,11 @@
                 <label for="TA">Take Away</label>
                 <input type="radio" name="order-type" id="DE" value="DE">
                 <label for="DE">Delivery</label>
-                <input type="radio" name="order-type" id="DT" value="DT">
-                <label for="DT">Drive Thru</label>
             </div>
         </div>
         <div class="option-group">
             <p>What did you order?</p>
-            <select>
+            <select id="dropdown">
                 <option value="VD">Veggie Delite</option>
                 <option value="PBK">Plain Baked Potato</option>
                 <option value="FF">French Fries</option>
@@ -86,12 +84,24 @@
                 <label for="star-struck-rating">🤩</label>
             </div>
         </div>
+        <div class="check-container">
+            <p>Select the options that you want to receive in newsletter</p>
+            <div class="check-group">
+                <input type="checkbox" id="new-food-check" value="new-food">
+                <label for="new-food-check">New food variety</label>
+            </div>
+            <div class="check-group">
+                <input type="checkbox" id="food-offer-check" value="food-offer">
+                <label for="food-offer-check">Food offer</label>
+            </div>
+        </div>
         <textarea id="other-comments" placeholder="Do you have any other comments?"></textarea>
-        <button>Submit</button>
+        <button id="submit">Submit</button>
     </form>
     <footer>
         Made by <a href="https://github.com/dinesh-prabhu" target="_blank">Dinesh</a>.
     </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
