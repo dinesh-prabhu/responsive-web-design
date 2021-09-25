@@ -1,0 +1,118 @@
+:root {
+    --primary-border-color: #000;
+    --primary-font-color: #000;
+    --primary-background-color: #fff;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header {
+    font-size: x-large;
+}
+#navbar {
+    border-right: 1px solid var(--primary-border-color);
+    height: 100%;
+}
+.header-group {
+    display: flex;
+    justify-content: space-between;
+}
+.header-group > header {
+    margin: 1rem;
+    flex-grow: 1;
+    text-align: center;
+}
+#nav-drawer {
+    margin: 0 20px 0 0;
+    font-size: 2em;
+    align-self: center;
+    transition: transform 0.3s ease-in;
+}
+#nav-drawer.open {
+    transform: rotateZ(90deg);
+    transition: transform 0.3s ease-in;
+}
+.nav-links {
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.nav-links > li {
+    border-top: 1px solid var(--primary-border-color);
+}
+.nav-link {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--primary-font-color);
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+#main-doc {
+    padding: 1rem;
+}
+.code-block {
+    white-space: pre-line;
+    display: inline-block;
+    line-height: 2;
+    padding: 1rem;
+}
+#to-the-top-container {
+    text-decoration: none;
+    color: var(--primary-font-color);
+    display: none;
+}
+#to-the-top {
+    height: 40px;
+    width: 40px;
+    font-size: 2em;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    border: 3px solid var(--primary-border-color);
+    background-color: var(--primary-background-color);
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+}
+@media(hover: hover) {
+    .nav-links > li:hover {
+        background-color: var(--primary-border-color);
+        transition: background-color 0.2s ease-in;
+    }
+    .nav-links > li:hover > .nav-link {
+        color: var(--primary-background-color);
+        transition: color 0.1s ease-in;
+    }
+}
+@media(min-width: 720px) {
+    body {
+        flex-direction: row;
+    }
+    #navbar {
+        position: fixed;
+    }
+    .header-group {
+        display: initial;
+    }
+    #nav-drawer {
+        display: none;
+    }
+    .nav-links {
+        height: 84%;
+        display: block !important;
+    }
+    #main-doc {
+        margin-left: 275px;
+    }
+}
