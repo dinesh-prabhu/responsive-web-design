@@ -1,0 +1,70 @@
+:root {
+    --nav-background-color: #0250BB;
+    --card-shadow-color: rgba(0, 0, 0, 0.25);
+}
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--nav-background-color);
+    box-shadow: 2px 2px rgb(0 0 0 / 25%);
+    position: fixed;
+    width: 100vw;
+}
+.nav-links {
+    flex-basis: 20%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem 0 0;
+}
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+}
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.projects-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+.project-container {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 5px var(--card-shadow-color);
+    overflow: hidden;
+    text-decoration: none;
+}
+.project-thumbnail {
+    width: 100%;
+    display: block;
+}
+.project-title {
+    text-align: center;
+    display: block;
+    padding: 1rem;
+    border-top: 1px solid #000;
+    color: var(--nav-background-color);
+}
+@media(hover: hover) {
+    .nav-link:hover {
+        background-color: #fff;
+        color: var(--nav-background-color);
+    }
+    .project-title:hover {
+        color: #fff;
+        background-color: var(--nav-background-color);
+    }
+}
