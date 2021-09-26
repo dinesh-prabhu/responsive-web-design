@@ -76,15 +76,16 @@ header {
 #to-the-top {
     height: 40px;
     width: 40px;
-    font-size: 2em;
     display: inline-block;
     text-align: center;
     border-radius: 50%;
-    border: 3px solid var(--primary-border-color);
-    background-color: var(--primary-background-color);
+    border: 2px solid var(--primary-border-color);
     position: fixed;
     right: 25px;
     bottom: 25px;
+}
+#to-the-top > img {
+    margin-top: 8px;
 }
 @media(hover: hover) {
     .nav-links > li:hover {
