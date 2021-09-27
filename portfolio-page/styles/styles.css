@@ -1,10 +1,20 @@
 :root {
-    --nav-background-color: #0250BB;
+    --nav-background-color: #000;
+    --primary-font-color: #fff;
     --card-shadow-color: rgba(0, 0, 0, 0.25);
+}
+html {
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1 {
+    font-size: 2em;
+}
+i, span {
+    font-size: 1.1em;
 }
 #navbar {
     display: flex;
@@ -19,11 +29,11 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    margin: 0 2rem 0 0;
+    margin: 0 1rem 0 0;
 }
 .nav-link {
     text-decoration: none;
-    color: #fff;
+    color: var(--primary-font-color);
     display: inline-block;
     padding: 1rem;
 }
@@ -34,20 +44,34 @@ body {
     align-items: center;
     height: 100vh;
 }
+#welcome-section > h1 {
+    text-align: center;
+}
+#welcome-section > i {
+    border-bottom: 2px solid red;
+}
+#projects {
+    padding-top: 3rem;
+}
+#projects-heading {
+    text-align: center;
+}
+.card-layout {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 5px var(--card-shadow-color);
+}
 .projects-group {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
     margin: 0 auto;
     max-width: 1080px;
 }
-.project-container {
-    border-radius: 10px;
-    box-shadow: 0 3px 10px 5px var(--card-shadow-color);
+.project-tile {
     overflow: hidden;
     text-decoration: none;
 }
-.project-thumbnail {
+.project-thumbnail, .contact-tile > img {
     width: 100%;
     display: block;
 }
@@ -55,16 +79,86 @@ body {
     text-align: center;
     display: block;
     padding: 1rem;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--nav-background-color);
     color: var(--nav-background-color);
+}
+#projects, #contact-section {
+    margin: 3rem;
+}
+.contact-group {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "follow follow follow" "github codepen fcc";
+    gap: 1rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 1080px;
+    box-sizing: border-box;
+}
+.contact-tile {
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    align-self: center;
+}
+#follow-text {
+    place-self: center;
+    font-size: 2.2em;
+    grid-area: follow;
+}
+#profile-link {
+    justify-self: self-end;
+    grid-area: github;
+}
+#contact-codepen {
+    justify-self: center;
+    grid-area: codepen;
+}
+#contact-fcc {
+    justify-self: self-start;
+    grid-area: fcc;
+}
+#contact-fcc > img {
+    max-height: 55px;
 }
 @media(hover: hover) {
     .nav-link:hover {
-        background-color: #fff;
+        background-color: var(--primary-font-color);
         color: var(--nav-background-color);
     }
-    .project-title:hover {
-        color: #fff;
+    .project-tile:hover > .project-title {
+        color: var(--primary-font-color);
         background-color: var(--nav-background-color);
+    }
+}
+@media(min-width: 720px) {
+    .projects-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact-group {
+        grid-template-columns: 2fr repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: none;
+        gap: initial;
+    }
+    #follow-text, #profile-link, 
+    #contact-codepen, #contact-fcc {
+        grid-area: auto;
+    }
+}
+@media(min-width: 1080px) {
+    h1 {
+        font-size: 2.2em;
+    }
+    i, span {
+        font-size: 1.3em;
+    }
+    .nav-links {
+        margin-right: 2rem;
+    }
+    #follow-text {
+        font-size: 2.5em;
     }
 }
