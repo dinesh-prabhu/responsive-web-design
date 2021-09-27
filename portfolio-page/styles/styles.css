@@ -83,7 +83,7 @@ i, span {
     color: var(--nav-background-color);
 }
 #projects, #contact-section {
-    margin: 3rem;
+    margin: 2rem;
 }
 .contact-group {
     display: grid;
@@ -93,7 +93,7 @@ i, span {
     grid-template-areas: "follow follow follow" "github codepen fcc";
     gap: 1rem;
     margin: 2rem auto;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1080px;
     box-sizing: border-box;
 }
@@ -142,6 +142,10 @@ i, span {
         grid-template-rows: auto;
         grid-template-areas: none;
         gap: initial;
+        padding: 2rem;
+    }
+    #projects, #contact-section {
+        margin: 3rem;
     }
     #follow-text, #profile-link, 
     #contact-codepen, #contact-fcc {
